@@ -1,0 +1,3 @@
+[submodule "ass1-gemm/how-to-optimize-gemm"]
+	path = ass1-gemm/how-to-optimize-gemm
+	url = git@github.com:Szaroslav/how-to-optimize-gemm.git
