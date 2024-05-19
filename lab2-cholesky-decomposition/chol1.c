@@ -7,8 +7,6 @@
 
 #define IDX(i, j, n) (((j)+ (i)*(n)))
 
-
-
 static double gtod_ref_time_sec = 0.0;
 
 /* Adapted from the bl2_clock() routine in the BLIS library */
@@ -26,7 +24,7 @@ double dclock(){
 
 
 
-int chol(double * A, unsigned int n){
+int chol(double * A, unsigned int n) {
     int i, j, k;
 
     for (j = 0; j < n; j++) {
@@ -49,7 +47,7 @@ int chol(double * A, unsigned int n){
     return (0);
 }
 
-int main(int argc, char ** argv){
+int main(int argc, char ** argv) {
     double* A;
     double t1, t2;
     int i, j, n, ret;
@@ -65,10 +63,10 @@ int main(int argc, char ** argv){
 
     dtime = dclock();
     if (chol(A, n)) {
-      fprintf(stderr,"Matrix is not symmetric or not positive definite\n");
+        fprintf(stderr, "Matrix is not symmetric or not positive definite\n");
     }
-    dtime = dclock()-dtime;
-    printf( "Time: %le \n", dtime);
+    dtime = dclock() - dtime;
+    printf("Time: %le \n", dtime);
 
     fflush( stdout );
 
